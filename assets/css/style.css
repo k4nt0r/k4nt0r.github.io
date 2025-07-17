@@ -804,3 +804,10 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
 .moon-icon {
   display: none;
 }
+
+[data-theme='dark'] .sun-icon {
+  display: none;
+}
+[data-theme='dark'] .moon-icon {
+  display: inline;
+}

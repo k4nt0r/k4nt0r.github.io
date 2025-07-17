@@ -805,9 +805,18 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
   display: none;
 }
 
-[data-theme='dark'] .sun-icon {
+/* Default (light mode): show moon, hide sun */
+.icon-moon {
+  display: inline;
+}
+.icon-sun {
   display: none;
 }
-[data-theme='dark'] .moon-icon {
+
+/* When in dark mode: show sun, hide moon */
+[data-theme="dark"] .icon-moon {
+  display: none;
+}
+[data-theme="dark"] .icon-sun {
   display: inline;
 }

@@ -781,9 +781,11 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
   height: 150px;
   width: auto;
   margin-right: 6px;
-  transition: filter 0.3s ease;
+  opacity: 0.9;
+  transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
 .nav-logo:hover {
-  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(140deg) saturate(600%) brightness(90%);
+  filter: brightness(1.15); /* slightly brighter */
+  opacity: 1;               /* slightly more visible */
 }

@@ -21,10 +21,12 @@
   const themeToggle = document.querySelector('.theme-toggle');
   const root = document.documentElement;
   
-  function setTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  setTheme(savedTheme);
+} else {
+  setTheme('dark'); // Default to dark mode
+}
   
   // Initial theme
   const savedTheme = localStorage.getItem('theme');

@@ -797,19 +797,3 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
   padding-left: 0;
   margin-left: 0;
 }
-
-/* Default (light mode): show moon, hide sun */
-.icon-moon {
-  display: inline;
-}
-.icon-sun {
-  display: none;
-}
-
-/* When in dark mode: show sun, hide moon */
-[data-theme="dark"] .icon-moon {
-  display: none;
-}
-[data-theme="dark"] .icon-sun {
-  display: inline;
-}

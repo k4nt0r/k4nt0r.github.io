@@ -1,7 +1,7 @@
 ---
 title: Main
 feed: show
-date: 2025-17-07
+date: 2025-07-17
 ---
 
 ---

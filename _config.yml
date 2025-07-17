@@ -35,11 +35,12 @@ preferences:
     enabled: true
 
 # Site Configuration
-title: "Your Site Title"
-heading: "Your Name"
-description: "A brief description of your site"
-url: "https://yoursite.com"
+title: "kant0r's Notes"
+heading: "kant0r"
+description: "Thoughts, notes, and technical breakdowns from the field."
+url: "https://kant0r.github.io"
 baseurl: ""
+
 
 # Asset Configuration
 apple_touch_icon: "/assets/img/profile.png"

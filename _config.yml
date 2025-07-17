@@ -58,11 +58,9 @@ menu:
 
 # Footer
 footer:
-  copyright: "© 2024 Your Name. Contents under CC-BY-NC"
+  copyright: "©2025 kant0r. Contents under CC-BY-NC"
   credits:
     enabled: true
-    url: "/credits"
-    text: "Credits"
 
 # Collections
 collections:

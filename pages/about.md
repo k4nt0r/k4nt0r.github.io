@@ -5,6 +5,5 @@ content-type: "static"
 permalink: /about
 ---
 
-# About
 Hi, I am Tal Kantor.  
 This site hosts technical notes, experiments, and breakdowns from the field.

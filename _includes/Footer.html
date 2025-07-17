@@ -21,11 +21,11 @@
   const themeToggle = document.querySelector('.theme-toggle');
   const root = document.documentElement;
   
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  setTheme(savedTheme);
-}
-
+  function setTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }
+  
   // Initial theme
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {

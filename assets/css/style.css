@@ -797,3 +797,10 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
   padding-left: 0;
   margin-left: 0;
 }
+
+.sun-icon {
+  display: inline;
+}
+.moon-icon {
+  display: none;
+}

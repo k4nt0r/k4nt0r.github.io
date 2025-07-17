@@ -780,12 +780,19 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
 .nav-logo {
   height: 150px;
   width: auto;
+  margin-left: 0;
   margin-right: 6px;
-  opacity: 0.9;
-  transition: filter 0.3s ease, opacity 0.3s ease;
+  opacity: 0.85;
+  transition: filter 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-logo:hover {
-  filter: brightness(1.15); /* slightly brighter */
-  opacity: 1;               /* slightly more visible */
+  opacity: 1;
+  filter: brightness(1.3);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-left {
+  padding-left: 0;
+  margin-left: 0;
 }

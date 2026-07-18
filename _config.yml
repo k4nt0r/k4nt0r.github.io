@@ -43,7 +43,7 @@ baseurl: ""
 
 
 # Asset Configuration
-favicon: "/assets/img/favicon.svg"
+favicon: "/assets/img/favicon.ico"
 css_file: "/assets/css/style.css"
 
 # Menu Items

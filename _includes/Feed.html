@@ -1,13 +1,13 @@
 <!-- feed with filter-->
 <div class="related-wrapper">
-{% assign note_items = site.notes | sort: "date" | reverse %}
-{% for note_items in note_items %}
-    {%- if note_items.feed == "show" -%}
+{% assign post_items = site.posts | sort: "date" | reverse %}
+{% for post_items in post_items %}
+    {%- if post_items.feed == "show" -%}
             <div class="notelist-feed">
-                <a href="{{ site.baseurl }}{{note_items.url}}">
-                    <p>{{ note_items.title }}</p>
-                    {%- if note_items.date -%}
-                    <span class="note-date">{{ note_items.date | date: "%b %d" }}</span>
+                <a href="{{ site.baseurl }}{{post_items.url}}">
+                    <p>{{ post_items.title }}</p>
+                    {%- if post_items.date -%}
+                    <span class="note-date">{{ post_items.date | date: "%b %d" }}</span>
                     {%- endif -%}
                 </a>
             </div>

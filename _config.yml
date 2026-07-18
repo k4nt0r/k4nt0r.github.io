@@ -35,7 +35,7 @@ preferences:
     enabled: true
 
 # Site Configuration
-title: "kant0r's Notes"
+title: "kant0r"
 heading: "kant0r"
 description: "Thoughts, notes, and technical breakdowns from the field."
 url: "https://kant0r.github.io"
@@ -48,8 +48,8 @@ css_file: "/assets/css/style.css"
 
 # Menu Items
 menu:
-  - title: "Notes"
-    url: "/notes"
+  - title: "Blog"
+    url: "/blog"
   - title: "About"
     url: "/about"
 

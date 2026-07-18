@@ -43,9 +43,8 @@ baseurl: ""
 
 
 # Asset Configuration
-apple_touch_icon: "/assets/img/profile.png"
+favicon: "/assets/img/favicon.svg"
 css_file: "/assets/css/style.css"
-ie_css: "/assets/css/ie-target.css"
 
 # Menu Items
 menu:

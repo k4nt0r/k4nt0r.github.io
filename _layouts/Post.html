@@ -11,7 +11,7 @@
     {%- endif -%}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     {%- if page.title -%}
     <meta content="{{ page.title }}" property="og:title">
     <meta content="article" property="og:type">
@@ -23,12 +23,7 @@
 
     <title>{%- if page.title -%}{{ page.title }} - {%- endif -%}{{ site.heading }}</title>
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
-    {%- if site.apple_touch_icon -%}
-    <link rel="apple-touch-icon" href="{{ site.baseurl }}{{ site.apple_touch_icon }}">
-    {%- endif -%}
-    {%- if site.favicon -%}
-    <link rel="icon" href="{{ site.baseurl }}{{ site.favicon }}" type="image/svg+xml" sizes="any" />
-    {%- endif -%}
+    <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon.svg" type="image/svg+xml" sizes="any" />
     {%- if site.css_file -%}
     <link href="{{ site.baseurl }}{{ site.css_file }}" rel="stylesheet" media="all" class="default" />
     {%- else -%}
@@ -38,14 +33,6 @@
     <link href="{{ site.baseurl }}/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" />
     {%- endif -%}
 
-    <!--[if IE]>
-        {%- if site.ie_css -%}
-        <link href="{{ site.baseurl }}{{ site.ie_css }}" rel="stylesheet" type="text/css"/>
-        {%- else -%}
-        <link href="{{ site.baseurl }}/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
-        {%- endif -%}
-    <![endif]-->
-    <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
 </head>
 
@@ -59,12 +46,13 @@
             <!-- Homepage Layout-->
             {%- if page.permalink == "/" -%}
                 {%- if site.preferences.homepage.enabled -%}
-                    <!--- Show content from index.md when homepage is enabled -->
                     {%- include Content.html -%}
                 {%- else -%}
-                    <!--- Show content from notes.md + search + feed when homepage is disabled -->
-                    <h1>{{page.title}}</h1>
-                    {%- include Content.html -%}
+                    <div class="hero">
+                        <img class="hero-logo" src="{{ site.baseurl }}/assets/img/logo.png" alt="kant0r logo">
+                        <p class="hero-tagline">{{ site.description }}</p>
+                    </div>
+                    <hr class="hero-divider">
                     {%- include Search.html -%}
                     {%- include Feed.html -%}
                 {%- endif -%}
@@ -111,6 +99,9 @@
                             <div class="notelist-feed">
                                 <a href="{{ site.baseurl }}{{post_items.url}}">
                                     <p>{{ post_items.title }}</p>
+                                    {%- if post_items.date -%}
+                                    <span class="note-date">{{ post_items.date | date: "%b %d" }}</span>
+                                    {%- endif -%}
                                 </a>
                             </div>
                     {%- endif -%}

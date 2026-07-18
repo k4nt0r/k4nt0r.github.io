@@ -6,6 +6,9 @@
             <div class="notelist-feed">
                 <a href="{{ site.baseurl }}{{note_items.url}}">
                     <p>{{ note_items.title }}</p>
+                    {%- if note_items.date -%}
+                    <span class="note-date">{{ note_items.date | date: "%b %d" }}</span>
+                    {%- endif -%}
                 </a>
             </div>
     {%- endif -%}
